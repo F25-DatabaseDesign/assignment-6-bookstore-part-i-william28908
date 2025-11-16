@@ -47,21 +47,27 @@ books = [
 @app.route('/')
 def home():
     #Link to the index page.  Pass the categories as a parameter
-    return render_template()
+    return render_template("index.html", categories=categories)
 
 @app.route('/category')
 def category():
     # Store the categoryId passed as a URL parameter into a variable
+    selected_cat = request.args.get("categoryid")
 
     # Create a new list called selected_books containing a list of books that have the selected category
+    selected_books = []
+    for book in books:
+          if book[1] == selected_cat:
+                   selected_books.append(book)
+                  
 
     # Link to the category page.  Pass the selectedCategory, categories and books as parameters
-    return render_template()
+    return render_template("category.html", selectedCategory = selected_cat, categories = categories, books = selected_books)
 
 @app.route('/search')
 def search():
     #Link to the search results page.
-    return render_template()
+    return render_template("search.html")
 
 @app.errorhandler(Exception)
 def handle_error(e):
