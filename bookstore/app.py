@@ -37,8 +37,6 @@ books = [
          [14, "Cyberpunk", "Snow Crash", 'Neal Stephenson", "9780553380958", 5.99, "snow_crash.jpg", 1],
          [15, "Cyberpunk", "Synners", 'Pat Cadigan", "9780575119543", 28.98, "synners.jpg", 0],
          [16, "Cyberpunk", "Hardwired", 'Walter Jon Williams", "9781597800624", 17.09, "hardwired.jpg", 1],
-
-
         ]
 
 
